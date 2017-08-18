@@ -193,7 +193,17 @@ var lengthOfLast = function(arr) {
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+var sumBelowTen = function (arr) {
+  var result = 0
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < 10) {
+      result += arr[i]
+    }
+  }
+
+  return result
+}
 
 /* #moreThanTenLetters
  *
