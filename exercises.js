@@ -603,7 +603,15 @@ var stringToKeys = function(str) {
  * @param {Array}
  * @return {Object}
  */
-var charCountMap;
+var charCountMap = function(arr) {
+  var results = {}
+
+  for (var i = 0; i < arr.length; i++) {
+    results[arr[i]] = arr[i].length
+  }
+
+  return results
+}
 
 /* #frequencyMap
  *
