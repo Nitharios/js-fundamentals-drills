@@ -21,7 +21,22 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+var sumArrays = function(arr1, arr2) {
+  var result = 0;
+  var loopLength = 0;
+
+  if (arr1.length > arr2.length) {
+    loopLength = arr1.length;
+  } else {
+    loopLength = arr2.length;
+  }
+
+  for (var i = 0; i < loopLength; i++) {
+    result += (arr1[i]+arr2[i])
+  }
+
+  return result
+}
 
 /* #stringCount
  *
@@ -380,7 +395,7 @@ var tupleConvertToObject;
 
 module.exports = {
   doubleArray: doubleArray,
-  sumArrays: null, 
+  sumArrays: sumArrays, 
   stringCount: null,
   arrayLength: null,
   countAll: null,
