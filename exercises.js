@@ -116,7 +116,10 @@ var countAllStrings = function(arr) {
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+var convertToArray = function (obj) {
+  var result = Object.values(obj)
+  return result
+}
 
 /* #objectSize
  *
