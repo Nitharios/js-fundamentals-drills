@@ -333,7 +333,10 @@ var getObjectValues = function(obj) {
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+var makeObject = function(str1, str2) {
+  var result = {[str1]:str2}
+  return result
+}
 
 /* #makeObjectReverse
  *
@@ -343,7 +346,17 @@ var makeObject;
  * @param {String}
  * @return {Bool}
  */
-var makeObjectReverse;
+var makeObjectReverse = function (str1, str2) {
+  var result;
+
+  if (typeof str1 === 'string') {
+    result = {[str1]:str2}
+  } else {
+    result = {[str2]:str1}
+  }
+
+  return result
+}
 
 /* #tupleToObject
  *
