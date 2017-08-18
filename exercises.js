@@ -502,7 +502,21 @@ var arraysToObject = function(arr1, arr2) {
  * @param {Object}
  * @return {Array}
  */
-var objectsToTuples;
+var objectsToTuples = function (obj1, obj2) {
+  var results = []
+  var keys = Object.keys(obj1).concat(Object.keys(obj2))
+  var values = Object.values(obj1).concat(Object.values(obj2))
+
+  for (var i = 0; i < values.length; i++) {
+    var tempArray = []
+      tempArray[0] = keys[i]
+      tempArray[1] = values[i]
+
+    results.push(tempArray)
+  }
+
+  return results
+}
 
 /* #mapArrayValues
  *
