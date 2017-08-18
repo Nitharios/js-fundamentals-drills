@@ -69,7 +69,15 @@ var arrayLength = function(arr) {
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arr) {
+  var result = 0
+
+  for (var i = 0; i < arr.length; i++) {
+    result += arr[i]
+  }
+
+  return result
+}
 
 /* #countStrings
  *
