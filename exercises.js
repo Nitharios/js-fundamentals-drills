@@ -181,7 +181,10 @@ var splitString = function(str) {
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast = function(arr) {
+  var result = arr.pop().length
+  return result
+}
 
 /* #sumBelowTen
  *
