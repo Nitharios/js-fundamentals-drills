@@ -465,7 +465,15 @@ var objectToArray = function(obj) {
  * @param {Array}
  * @return {Object}
  */
-var arrayToObject;
+var arrayToObject = function(arr) {
+  var results = {}
+
+  for (var i = 0; i < arr.length; i++) {
+    results[arr[i]] = false
+  }
+
+  return results
+}
 
 /* #arraysToObject
  *
