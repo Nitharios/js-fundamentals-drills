@@ -103,7 +103,16 @@ var countStrings = function(arr) {
  * @param {String}
  * @return {Number}
  */
-var countAllStrings;
+var countAllStrings = function(arr) {
+  countStrings(arr)
+  result = 0
+
+  for (var i = 0; i < arr.length; i++) {
+    result += strLengthArr[i]
+  }
+
+  return result
+}
 
 /* #convertToArray
  *
