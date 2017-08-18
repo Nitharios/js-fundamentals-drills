@@ -212,7 +212,17 @@ var sumBelowTen = function (arr) {
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function(arr) {
+  var result = 0
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].length > 10) {
+      result += 1
+    }
+  }
+
+  return result
+}
 
 /* #multiplyAll
  *
