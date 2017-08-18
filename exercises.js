@@ -399,7 +399,6 @@ var tupleToObjectReverse = function(arr) {
  */
 var strToKeys = function(arr) {
   var result = {};
-  var str = ""
 
   for (var i = 0; i < arr.length; i++) {
     result[arr[i]] = 0
@@ -415,7 +414,11 @@ var strToKeys = function(arr) {
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+var getValues = function(obj) {
+  var values = Object.values(obj)
+
+  return values
+}
 
 /* #getKeys
  *
@@ -424,7 +427,11 @@ var getValues;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function(obj) {
+  var keys = Object.keys(obj)
+
+  return keys
+}
 
 /* #objectToArray
  *
@@ -434,7 +441,21 @@ var getKeys;
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+var objectToArray = function(obj) {
+  var results = []
+  var keys = Object.keys(obj)
+  var values = Object.values(obj)
+
+  for (var i = 0; i < values.length; i++) {
+    var tempArray = []
+      tempArray[0] = keys[i]
+      tempArray[1] = values[i]
+
+    results.push(tempArray)
+  }
+
+  return results
+}
 
 /* #arrayToObject
  *
