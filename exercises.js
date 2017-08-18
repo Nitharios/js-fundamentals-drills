@@ -620,7 +620,39 @@ var charCountMap = function(arr) {
  * @param {String}
  * @return {Bool}
  */
-var frequencyMap;
+var frequencyMap = function(arr) {
+  var results = {}
+  var shiftArr = arr
+  var tempStr = ""
+  var countStr = 0
+
+  for (var i = 0; i < arr.length; i++) {
+
+    if (tempStr !== arr[i]) {
+      tempStr = arr[i]
+      countStr = 1
+    } else {
+      countStr += 1
+    }
+
+    results[tempStr] = countStr
+
+  }
+
+  return results
+
+  /*var results = arr.reduce(function (allKeys, key) {
+    if (key in allKeys) {
+      allKeys[key] ++
+    } else {
+      allKeys[key] = 1
+    }
+    return allKeys
+  }, {})
+
+  return results
+  */
+}
 
 /* #tupleConvertToObject
  *
