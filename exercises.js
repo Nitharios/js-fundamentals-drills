@@ -104,14 +104,9 @@ var countStrings = function(arr) {
  * @return {Number}
  */
 var countAllStrings = function(arr) {
-  countStrings(arr)
-  result = 0
 
-  for (var i = 0; i < arr.length; i++) {
-    result += strLengthArr[i]
-  }
+  return(countAll(countStrings(arr)))
 
-  return result
 }
 
 /* #convertToArray
