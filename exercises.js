@@ -346,7 +346,7 @@ var makeObject = function(str1, str2) {
  * @param {String}
  * @return {Bool}
  */
-var makeObjectReverse = function (str1, str2) {
+var makeObjectReverse = function(str1, str2) {
   var result;
 
   if (typeof str1 === 'string') {
@@ -365,7 +365,11 @@ var makeObjectReverse = function (str1, str2) {
  * @param {Array}
  * @return {Object}
  */
-var tupleToObject;
+var tupleToObject = function(arr) {
+  var result = {[arr[0]]:arr[1]}
+
+  return result
+}
 
 /* #tupleToObjectReverse
  *
@@ -374,7 +378,17 @@ var tupleToObject;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObjectReverse;
+var tupleToObjectReverse = function(arr) {
+  var result;
+
+  if (typeof arr[0] === 'string') {
+    result = {[arr[0]]:arr[1]}
+  } else {
+    result = {[arr[1]]:arr[0]}
+  }
+
+  return result
+}
 
 /* #strToKeys
  *
@@ -383,7 +397,16 @@ var tupleToObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var strToKeys;
+var strToKeys = function(arr) {
+  var result = {};
+  var str = ""
+
+  for (var i = 0; i < arr.length; i++) {
+    result[arr[i]] = 0
+  }
+
+  return result
+}
 
 /* #getValues
  *
